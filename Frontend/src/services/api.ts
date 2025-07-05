@@ -10,7 +10,7 @@ import type {
 } from '../types';
 
 const api = axios.create({
-  baseURL: 'https://library-eight-brown.vercel.app/api',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://librarymanagement2.vercel.app/api',
   timeout: 20000,
   headers: {
     'Content-Type': 'application/json',

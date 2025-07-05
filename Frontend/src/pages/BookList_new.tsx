@@ -30,7 +30,7 @@ const BookListGrid = () => {
       setIsLoading(true);
       setError(null);
       
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
       const response = await axios.get<ApiResponse<Book[]>>(
         `${apiBaseUrl}/books`,
         {
